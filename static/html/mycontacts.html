@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Contacts</title>
+  <link rel="stylesheet" href="/static/css/contactsStyle.css">
+
+</head>
+<body>
+  <script src="/static/js/contactScript.js"></script>
+
+  <div id="navigation">
+    <a href="mycontacts.html">My Contacts</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="contactForm.html">Add Contact</a>
+    <a href="stocks.html">My Stocks</a>
+  </div>
+
+  <h1>My Contacts</h1>
+
+  <div class="container">
+    <table>
+      <tr id="titles">
+        <th >Name</th>
+        <th >Location</th>
+        <th >Contact Information</th>
+        <th >Email</th>
+        <th >Website</th>
+      </tr>
+
+      <tr class="contactInfo" onmouseover="chgimg('https://images.pexels.com/photos/3803517/pexels-photo-3803517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2','Operating Systems',this)" onmouseout="clearimg(this)">
+        <td class="name">
+            <img class="cellImage">            
+            Anand Tripathi
+        </td>
+ 
+        <td class="location">5-205 Kenneth H. Keller Hall 200 Union Street Se Minneapolis, MN 55455</td>
+        <td class="info">CSCI 5103 instructor</td>  
+        <td><a href="mailto:tripathi@umn.edu">tripathi@umn.edu</a></td> 
+        <td><a href="https://www-users.cse.umn.edu/~tripathi/">https://www-users.cse.umn.edu/~tripathi/</a></td> 
+      </tr>
+
+
+      <tr class="contactInfo" onmouseover="chgimg('https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg','Html Coding',this)" onmouseout="clearimg(this)">
+        <td class="name">
+            <img class="cellImage">
+            Dan Challou
+        </td>
+        <td class="location">322 Lind Hall 207 Church Street Se Minneapolis, MN 55455</td>
+        <td class="info">CSCI 4131 instructor</td>  
+        <td><a href="mailto:chal0006@umn.edu">chal0006@umn.edu</a></td> 
+        <td><a href="https://experts.umn.edu/en/persons/alexander-mcleod">https://cse.umn.edu/cs/dan-challou</a></td> 
+      </tr>
+
+      <tr class="contactInfo" onmouseover="chgimg('https://images.pexels.com/photos/103124/pexels-photo-103124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2','The Lowry Cafe',this)" onmouseout="clearimg(this)">
+        <td class="name">
+            <img class="cellImage">
+            The Lowry Cafe
+        </td>
+        <td class="location"> 2207 Lowry Ave N, Minneapolis, MN 55411</td>
+        <td class="info">Favorite breakfast place</td>  
+        <td><a href="mailto:thelowry@blueplateco.com">thelowry@blueplateco.com</a></td> 
+        <td><a href="https://lowrycafe.wordpress.com/">https://lowrycafe.wordpress.com/</a></td> 
+      </tr>
+
+      <tr class="contactInfo" onmouseover="chgimg('https://libnews.umn.edu/wp-content/uploads/2023/09/Photo-History-of-HSL-1.jpg','Health Sciences Library',this)" onmouseout="clearimg(this)">
+        <td class="name">
+            <img class="cellImage">
+            Health Sciences Library
+        </td> 
+        <td class="location">Phillips-Wangensteen Building, East Bank 516 Delaware Street SE Minneapolis, MN 55455</td>
+        <td class="info">The library that I study at</td>  
+        <td><a href="mailto:hsl@umn.edu">hsl@umn.edu</a></td> 
+        <td><a href="https://hsl.lib.umn.edu/">https://hsl.lib.umn.edu/</a></td> 
+      </tr>
+
+
+      <tr class="contactInfo" onmouseover="chgimg('https://images.pexels.com/photos/12187693/pexels-photo-12187693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1','Boba Tea',this)" onmouseout="clearimg(this)">
+        <td class="name">
+            <img class="cellImage">
+            Kung Fu Tea
+        </td>
+        <td class="location">923 Washington Ave SE, Minneapolis, MN 55414</td>
+        <td class="info">Favorite boba tea place</td>  
+        <td><a href="mailto:info@kfteausa.com">info@kfteausa.com</a></td> 
+        <td><a href="https://www.kungfutea.com/">https://www.kungfutea.com/</a></td> 
+      </tr>
+
+    </table>
+
+    <div class="imageDisplay">
+      <img class="externalImage" src="/static/img/gophers-mascot.png" alt="External Image Display">
+    </div>
+
+  </div>
+
+  <div class="mapContainer"> 
+    <div id="directions"></div>
+    <div id="map"></div>
+
+    <div id="panel">
+      <label for="destination">Directions to (from your location)</label>
+      <input type="text" id="destination" placeholder="Coffman Union"> 
+      <p>By: </p>
+
+      <div class="optionsTravel">
+        <div id="option1">
+          <input type ="radio" id="walking" name="travelMode" value="WALKING" checked>
+          <label for="walking">WALK</label>
+        </div>
+
+        <div id="option2">
+          <input type ="radio" id="driving" name="travelMode" value="DRIVING">
+          <label for="driving">DRIVE</label>
+        </div>
+
+        <div id="option2">
+          <input type ="radio" id="transit" name="travelMode" value="TRANSIT">
+          <label for="transit">TRANS</label>
+        </div>
+      </div>
+
+      <button id="get-directions">Go</button>
+
+    </div>
+  </div>
+
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDA5p8w5AR25nAu7LumsIdxMUemAIUZBM&loading=async&callback=initMap">
+  </script>
+
+</body>
+</html>

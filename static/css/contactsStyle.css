@@ -1,0 +1,117 @@
+body{
+  background-color: #96add6;
+}
+
+.container{
+  display: flex;
+}
+
+#navigation{
+  display:flex;
+  justify-content: center;
+  background-color: #e85234ce;
+  color:#f9b8afaf;
+  gap:90px;
+}
+
+#navigation > a{
+  font-size:x-large;
+  padding:10px;
+  border: solid 3px rgb(218, 218, 218);
+  border-style: outset;
+  background-color: #f9b8afaf;
+  text-decoration: none;
+}
+
+#navigation > a:hover {
+  color: rgb(235, 253, 94);
+}
+
+table, th,td{
+  border-collapse: collapse;
+  border:3px solid;
+}
+#titles>th{
+  background-color: #e8523496;
+}
+.location{
+  width:20%;
+}
+
+.contactInfo{
+  height:90px;
+}
+
+tr:nth-child(even){
+  background-color: #f9b8afaf;
+}
+
+tr:nth-child(odd){
+  background-color: #ffffffaf;
+}
+
+#address{
+  height:30%
+}
+
+#contactInfo>img{
+  height:200px;
+  width:auto;
+  display: none;
+}
+
+.imageDisplay img {
+  width: 80%;
+  height:auto;
+  display: block;
+  margin-top: 20px;
+}
+
+.imageDisplay {
+  display: flex;  
+  justify-content: center; 
+  align-items: center; 
+  height: auto;
+  width: 40%;
+}
+
+.cellImage {
+  display: none;
+  width: 100px;
+  height: auto;
+}
+
+.contactInfo:hover .cellImage {
+  display: block;
+}
+
+#map {
+  height: 400px;
+  width: 55%;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 6px;
+}
+
+#panel {
+  height: 200px;
+  width: 34%;
+  margin-right: 0%;
+  margin:auto;
+}
+
+.mapContainer{
+  padding: 10px;
+  margin-top: 5%;
+  display: flex;
+  background-color: #f9b8afaf;
+  border: 2px solid #000000;
+}
+
+#directions{
+  background-color: #ffffffaf;
+  overflow-y: scroll; 
+  height: 400px;
+  width: 40%;
+  border-radius: 6px;
+}
